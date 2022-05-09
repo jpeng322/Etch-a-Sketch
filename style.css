@@ -1,0 +1,22 @@
+div {
+    /* border: 1px solid red; */
+    padding: 10px
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colDiv {
+    border: 1px solid black;
+}
+
+.boardDiv {
+    display: flex;
+    margin: 0px;
+    /* border: 1px solid red; */
+    padding: 0
+}
