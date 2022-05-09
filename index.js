@@ -25,26 +25,52 @@ function createCol(cells) {
 }
 createCol(16)
 
+// function createChart(squaresPer) {
+//     createDiv(squaresPer)
+//     createCol(squaresPer)
+// }
 
-function hover() {
-    this.style.backgroundColor = 'red'
-}
+
 
 document.getElementsByClassName
 let cells = document.getElementsByClassName('colDiv');
-console.log(cells[1])
-cells[0].addEventListener('mouseover', hover)
 
 function giveListener() {
     for (i = 0; i < cells.length; i++) {
-        cells[i].addEventListener('mouseover', hover)
+        cells[i].addEventListener('mousemove', hover)
     }
 }
-console.log(giveListener())
 
+giveListener()
 
+let mouseDown = 0;
+window.onmousedown = () => {
+    ++mouseDown;
+    if (mouseDown) {
+        console.log('mouse button down')
+    }
+}
+window.onmouseup = () => {
+    --mouseDown;
+    if (mouseDown) {
+        console.log('mouse button down')
+    }
+}
+function hover() {
+    if (mouseDown > 0) {
+        this.style.backgroundColor = 'red'
+    }
+}
 
-
+// const subBtn = document.getElementById("subBtn")
+// console.log(subBtn)
+// subBtn.onclick = function () {
+//     const numOfCells = (document.getElementById('text').value)
+//     return createChart(numOfCells)
+// }
+// let btn = document.createElement('button')
+// btn.innerHTML = "How many boxes per line would you like?"
+// document.body.appendChild(btn)
 
 // function createCells() {
 //     for (i = 0; i < 16; i++) {
