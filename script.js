@@ -5,7 +5,6 @@ function createDiv(rows) {
     for (i = 0; i < rows; i++) {
         const boardDiv = document.createElement('div');
         boardDiv.className = "boardDiv";
-        // console.log(boardDiv)
         container.appendChild(boardDiv)
     }
 
@@ -32,22 +31,6 @@ function createChart(squaresPer) {
 }
 
 createChart(24)
-// if (subBtn.clicked == true) {
-//     console.log("button was clicked")
-// }
-
-// const subBtn = document.getElementById("subBtn")
-// console.log(subBtn)
-
-// subBtn.onclick = function () {
-//     const numOfCells = (document.getElementById('text').value)
-//     console.log()
-//     for (i = 0; i < cells.length; i++) {
-//         container.removeChild(container.lastChild);
-//     }
-//     createChart(numOfCells)
-//     giveListener()
-// }
 
 
 
@@ -55,23 +38,12 @@ document.getElementsByClassName
 let cells = document.getElementsByClassName('colDiv');
 let mouseDown = 0;
 window.onmousedown = () => {
-    // ++mouseDown;
     mouseDown = 1
-    // if (mouseDown) {
-    //     mouseDown = 1
-    // }
-
 }
 window.onmouseup = () => {
     --mouseDown;
-    // if (mouseDown) {
-    //     console.log('mouse button down')
-    //     console.log(mouseDown)
-    // }
 }
 
-
-// console.log(mouseDown)
 
 
 function giveBoxColor(boxColor) {
@@ -181,4 +153,6 @@ function blackTransition() {
     clear_btn.style.color = 'black';
     clear_btn.style.transitionDuration = '1s'
 }
+
+document.querySelector('#copyright').textContent = `Copyright © ${new Date().getFullYear()}`
 
