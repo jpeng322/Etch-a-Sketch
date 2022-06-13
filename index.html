@@ -5,13 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Josefin+Sans&display=swap');
+    </style>
+    <title>Etch-a-Sketch</title>
 </head>
 
 <body>
-    <div id="container"></div>
-    <script src="index.js"></script>
+    <div class="title">Etch-A-Sketch</div>
+    <div class="full-container">
+        <div class="options-container">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <span id="color_front"></span>
+            <input type='color' value='#fefefe' class='bar' id='colour'>
+            </label>
+            <button id="color-btn" class="options">Color</button>
+            <button id="rainbow-btn" class="options">Rainbow</button>
+            <button id="eraser-btn" class="options">Eraser</button>
+            <button id="clear-btn" class="options">Clear</button>
+        </div>
+        <div class="sketch-container"></div>
+    </div>
+    <!-- <input type="text" id="text">
+    <button type="button" id="subBtn">Submit</button> -->
+    <script src="script.js"></script>
 </body>
+
+
 
 </html>
