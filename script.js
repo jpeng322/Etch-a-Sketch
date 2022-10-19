@@ -53,7 +53,6 @@ function giveBoxColor(boxColor) {
         }
         )
     }
-    console.log(boxColor)
 }
 
 
@@ -96,13 +95,14 @@ $("#colour").change(function (event) {
     color_val = $(this).val();
     giveBoxColor(color_val);
     $("#color_front").css('background-color', $(this).val());
+    changeColor(color_btn)
 });
 
 $("#color_front").click(function (event) {
     $("#colour").click();
 });
 
-console.log(color_val)
+
 
 let randomize
 
@@ -141,10 +141,10 @@ eraser_btn.addEventListener('click', function () {
 })
 
 clear_btn.addEventListener('click', function () {
-    // changeColor(clear_btn);
+    changeColor(clear_btn);
     clear_btn.style.backgroundColor = '#D8D2CB';
     clear_btn.style.color = 'white';
-    clear_btn.style.transitionDuration = '1s';
+    // clear_btn.style.transitionDuration = '10s';
     setTimeout(() => { blackTransition() }, 1000)
     clearAll()
 })
